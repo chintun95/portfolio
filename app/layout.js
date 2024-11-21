@@ -1,6 +1,8 @@
 import './globals.css'
 import NavBar from './navbar';
 import Profile from './profile';
+import About from './about';
+import { poppins } from "./fonts/fonts";
 
 export const metadata = {
   title: "Chin Lun Wong",
@@ -11,7 +13,11 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <NavBar/>
+      <body className={poppins.className}>
+        <NavBar/>
+        <Profile/>
+        <About/>
+      </body>
     </html>
   );
 }
